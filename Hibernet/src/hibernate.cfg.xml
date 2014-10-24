@@ -25,9 +25,18 @@
    <mapping class="com.unicom.oneToone.Husband" />
    <mapping class="com.unicom.oneToone.Wife" />    
    <mapping class="com.unicom.oneTooneforeign.Husband" />
-   <mapping class="com.unicom.oneTooneforeign.Wife" />     -->
+   <mapping class="com.unicom.oneTooneforeign.Wife" />     
    <mapping class="com.unicom.oneToonedouble.Husband" />
    <mapping class="com.unicom.oneToonedouble.Wife" />   
+   <mapping class="com.unicom.manytoone.Address" />
+   <mapping class="com.unicom.manytoone.People" />    -->
+  <mapping class="com.unicom.onetomany.Address" />
+   <mapping class="com.unicom.onetomany.People" />
+  
+  
+  
+  
+  
   </session-factory>
  
  </hibernate-configuration>

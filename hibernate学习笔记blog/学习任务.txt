@@ -1,0 +1,9 @@
+http://blog.csdn.net/wangpeng047/article/category/907051/1
+mysql 连接断开解决  c3p连接池详解
+http://blog.csdn.net/linan0930/article/details/21108411   主键策略
+
+
+http://docs.jboss.org/hibernate/annotations/3.4/reference/zh_cn/html_single/官网
+
+
+http://blog.csdn.net/wangpeng047/article/category/907051/1   其他

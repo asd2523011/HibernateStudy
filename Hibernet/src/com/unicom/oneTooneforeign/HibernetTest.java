@@ -31,7 +31,6 @@ public class HibernetTest {
 	public void closesession() {
 
 		session.getTransaction().commit();
-		sessionFactory.close();
 	}
 
 	@Test

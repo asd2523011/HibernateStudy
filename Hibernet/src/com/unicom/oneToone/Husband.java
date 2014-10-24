@@ -1,13 +1,11 @@
 package com.unicom.oneToone;
 
-import java.beans.ConstructorProperties;
 import java.io.Serializable;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
 import javax.persistence.OneToOne;
 import javax.persistence.PrimaryKeyJoinColumn;
 import javax.persistence.Table;
@@ -19,6 +17,10 @@ import org.hibernate.annotations.Parameter;
 @Entity
 @Table(name="t_husband")
 public class Husband implements Serializable{
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	public String id;
 	public String name;
 	public int age;

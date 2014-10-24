@@ -1,9 +1,4 @@
 package com.unicom.oneToone;
-
-import java.util.List;
-import java.util.UUID;
-
-import org.hibernate.Criteria;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.AnnotationConfiguration;
@@ -28,7 +23,6 @@ public class Test {
 
 		
 	}
-	 @SuppressWarnings("unchecked")
 	public void find(){
 		Configuration config=new AnnotationConfiguration();
 		 config.configure();
