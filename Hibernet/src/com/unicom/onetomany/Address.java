@@ -13,12 +13,12 @@ import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 import org.hibernate.annotations.GenericGenerator;
+/*
+ * @author huzhen
+ */
 @Entity
 @Table(name="t2_address")
 public class Address implements Serializable {
-	/**
-	 * 
-	 */
 	private static final long serialVersionUID = 1L;
 	public String id;
 	public String name;

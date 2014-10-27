@@ -15,7 +15,9 @@ import javax.persistence.CascadeType;
 
 import org.hibernate.annotations.GenericGenerator;
 import org.hibernate.annotations.Parameter;
-
+/*
+ * @author huzhen
+ */
 @Entity
 @Table(name="t_husband")
 public class Husband implements Serializable{

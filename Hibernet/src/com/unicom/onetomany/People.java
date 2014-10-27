@@ -14,6 +14,9 @@ import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 import org.hibernate.annotations.GenericGenerator;
+/*
+ * @author huzhen
+ */
 @Entity
 @Table(name="t2_people")
 public class People implements Serializable {

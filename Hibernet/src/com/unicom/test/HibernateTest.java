@@ -9,7 +9,6 @@ import org.hibernate.cfg.Configuration;
 
 /**
  *
- * @author huzhen
  *
  * @date 2011-7-20
  *
@@ -18,9 +17,9 @@ public class HibernateTest {
 
  public static void main(String[] args) {
   HibernateTest test=new HibernateTest();
-  test.add();
-  test.find();
- // test.insert();
+ // test.add();
+ // test.find();
+ test.insert();
  }
  public void add(){
  Configuration config=new AnnotationConfiguration();
@@ -32,9 +31,9 @@ public class HibernateTest {
  
  Product p=new Product();
  p.setId(89);
- p.setName("¼ÆËã»ú¿ÆÑ§Óë¼¼Êõ");
+ p.setName("è®¡ç®—æœºç§‘å­¦ä¸ŽæŠ€æœ¯");
  p.setPrice("123");
- p.setDescripton("¼ÆËã»ú¿ÆÑ§Óë¼¼Êõ,ºÃ°¡£¬ÕæÊÇºì°¡");
+ p.setDescripton("è®¡ç®—æœºç§‘å­¦ä¸ŽæŠ€æœ¯,å¥½å•Šï¼ŒçœŸæ˜¯çº¢å•Š");
  
  p.setCategory(c);
  c.getProducts().add(p);
@@ -65,7 +64,7 @@ public void insert(){
 	  Session session=sessionFactory.getCurrentSession();
 	  session.beginTransaction();
 	  Category c=new Category();
-	  c.setId(5);
+	  c.setId(7);
 	  c.setName("huzhen");
 	  c.setDescription("fuck");
 	  session.save(c);

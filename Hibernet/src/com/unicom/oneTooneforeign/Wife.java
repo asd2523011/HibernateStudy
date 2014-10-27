@@ -10,7 +10,9 @@ import javax.persistence.Table;
 
 import org.hibernate.annotations.ForeignKey;
 import org.hibernate.annotations.GenericGenerator;
-
+/*
+ * @author huzhen
+ */
 @Entity
 @Table(name="t_wife")
 public class Wife implements Serializable{

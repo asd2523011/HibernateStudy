@@ -11,7 +11,9 @@ import org.hibernate.cfg.Configuration;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
-
+/*
+ * @author huzhen
+ */
 public class HibernetTest {
 	public static SessionFactory sessionFactory;
 	public static Session session;
@@ -52,7 +54,7 @@ public class HibernetTest {
 	{
 		Husband hus=(Husband) session.get(Husband.class, "8ab8dab2493c783501493c78366b0001");
 	    Wife wife=(Wife) session.get(Wife.class,"8ab8dab2493c6feb01493c6fef210002");
-		//session.delete(wife); //ÒòÎª±»¶¯¹ØÁª£¬É¾³ıÊ§°Ü
+		//session.delete(wife); //å› ä¸ºè¢«åŠ¨å…³è”ï¼Œåˆ é™¤å¤±è´¥
 	    session.delete(hus);    //
 	}
 

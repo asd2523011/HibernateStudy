@@ -10,6 +10,9 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 import org.hibernate.annotations.GenericGenerator;
+/*
+ * @author huzhen
+ */
 @Entity
 @Table(name="t_people")
 public class People implements Serializable {

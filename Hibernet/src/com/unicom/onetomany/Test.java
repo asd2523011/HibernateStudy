@@ -17,7 +17,9 @@ import org.hibernate.cfg.AnnotationConfiguration;
 import org.hibernate.cfg.Configuration;
 import org.junit.After;
 import org.junit.Before;
-
+/*
+ * @author huzhen
+ */
 public class Test {
 	public static SessionFactory sessionFactory;
 	public static Session session;
@@ -36,10 +38,10 @@ public class Test {
 		sessionFactory.close();
 	}
 	/*
-	 * ½øĞĞ×Å¸ö²åÈëµÄÊ±ºò£¬Ò»¶¨ÒªÔÚ×¢½âÉÏ¼ÓÉÏcascade=CascadeType.ALL£¬·ñÔò»á±¨
-	 * TransientObjectExceptionÒì³£¡£µ¥ÏòÒ»¶Ô¶à×¢½â£¬hibernate»áÈßÓàÒ»¸öÖĞ¼ä±í£¬
-	 * ÎÒÃÇ¿ÉÒÔÔÚ@onetomany´¦Ìí¼Ó×¢½â@JoinColumn(name="people_id")£¬½«»áÔÚµØÖ·
-	 * Êı¾İ¿âÖĞÌí¼ÓÒ»¸öÍâ¼üÁĞ
+	 * è¿›è¡Œç€ä¸ªæ’å…¥çš„æ—¶å€™ï¼Œä¸€å®šè¦åœ¨æ³¨è§£ä¸ŠåŠ ä¸Šcascade=CascadeType.ALLï¼Œå¦åˆ™ä¼šæŠ¥
+	 * TransientObjectExceptionå¼‚å¸¸ã€‚å•å‘ä¸€å¯¹å¤šæ³¨è§£ï¼Œhibernateä¼šå†—ä½™ä¸€ä¸ªä¸­é—´è¡¨ï¼Œ
+	 * æˆ‘ä»¬å¯ä»¥åœ¨@onetomanyå¤„æ·»åŠ æ³¨è§£@JoinColumn(name="people_id")ï¼Œå°†ä¼šåœ¨åœ°å€
+	 * æ•°æ®åº“ä¸­æ·»åŠ ä¸€ä¸ªå¤–é”®åˆ—
 	 */
 	@org.junit.Test
 	public void inserttest(){
@@ -47,7 +49,7 @@ public class Test {
 		ple.setAge(17);
 		ple.setDes("hehehheheheh");
 		Address add=new Address();
-		add.setName("¹«Ë¾");
+		add.setName("å…¬å¸");
 		add.setDestict("dizhi");
 		Address add1=new Address();
 		add1.setName("hoime");

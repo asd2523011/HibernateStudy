@@ -1,9 +1,5 @@
 package com.unicom.oneToonedouble;
 
-import java.util.List;
-import java.util.UUID;
-
-import org.hibernate.Criteria;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.AnnotationConfiguration;
@@ -12,6 +8,9 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
+/*
+ * @author huzhen
+ */
 public class HibernetTest {
 	public static SessionFactory sessionFactory;
 	public static Session session;
@@ -23,7 +22,6 @@ public class HibernetTest {
 		sessionFactory = config.buildSessionFactory();
 		session = sessionFactory.getCurrentSession();
 		session.beginTransaction();
-
 
 	}
 
@@ -47,14 +45,15 @@ public class HibernetTest {
 		session.save(hus);
 
 	}
-	
+
 	@Test
-	public void delete()
-	{
-		Husband hus=(Husband) session.get(Husband.class, "8ab8dab2493c932801493c932c020001");
-	   // Wife wife=(Wife) session.get(Wife.class,"8ab8dab2493c6feb01493c6fef210002");
-		//session.delete(wife); //ÒòÎª±»¶¯¹ØÁª£¬É¾³ıÊ§°Ü
-	    session.delete(hus);    //
+	public void delete() {
+		Husband hus = (Husband) session.get(Husband.class,
+				"8ab8dab2493c932801493c932c020001");
+		// Wife wife=(Wife)
+		// session.get(Wife.class,"8ab8dab2493c6feb01493c6fef210002");
+		// session.delete(wife); //å› ä¸ºè¢«åŠ¨å…³è”ï¼Œåˆ é™¤å¤±è´¥
+		session.delete(hus); //
 	}
 
 }

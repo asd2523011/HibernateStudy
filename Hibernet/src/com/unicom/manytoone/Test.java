@@ -11,7 +11,9 @@ import org.hibernate.cfg.AnnotationConfiguration;
 import org.hibernate.cfg.Configuration;
 import org.junit.After;
 import org.junit.Before;
-
+/*
+ * @author huzhen
+ */
 public class Test {
 	public static SessionFactory sessionFactory;
 	public static Session session;
@@ -30,7 +32,7 @@ public class Test {
 		sessionFactory.close();
 	}
 	/*
-	 * ²âÊÔÇ°£¬¸Ğ¾õÕâÑù²åÈë»á²»ÕıÈ·£¬ºóÀ´²âÊÔÒ»ÏÂ¾¹È»³É¹¦£¬¸Ğ¾õhibernateµ×²ã´¦ÀíÇ¿´ó
+	 * æµ‹è¯•å‰ï¼Œæ„Ÿè§‰è¿™æ ·æ’å…¥ä¼šä¸æ­£ç¡®ï¼Œåæ¥æµ‹è¯•ä¸€ä¸‹ç«Ÿç„¶æˆåŠŸï¼Œæ„Ÿè§‰hibernateåº•å±‚å¤„ç†å¼ºå¤§
 	 */
 	@org.junit.Test
 	public void inserttest(){
@@ -38,7 +40,7 @@ public class Test {
 		ple.setAge(17);
 		ple.setDes("hehehheheheh");
 		Address add=new Address();
-		add.setName("¹«Ë¾");
+		add.setName("å…¬å¸");
 		add.setDestict("dizhi");
 		add.setPeople(ple);
 		Address add1=new Address();
@@ -57,15 +59,15 @@ public class Test {
 	@org.junit.Test
 	public void select()
 	{
-		//session.get(People.class, "8ab8dab2493fd57401493fd577100002"); //Ö»ÊÇselect people
-	    Address add=(Address) session.get(Address.class, "8ab8dab2493fd57401493fd577100001"); //ÅäÖÃÑÓ³Ù¼ÓÔØºó£¬Ö»¼ÓÔØaddress£¬·ñÔòÈ«²¿¼ÓÔØ
+		//session.get(People.class, "8ab8dab2493fd57401493fd577100002"); //åªæ˜¯select people
+	    Address add=(Address) session.get(Address.class, "8ab8dab2493fd57401493fd577100001"); //é…ç½®å»¶è¿ŸåŠ è½½åï¼ŒåªåŠ è½½addressï¼Œå¦åˆ™å…¨éƒ¨åŠ è½½
 	    System.out.println("<<<<<<<<<<<<<<<<<<<");
-	    System.out.println(add.getPeople().getId());    //²âÊÔÑÓ³Ù¼ÓÔØÈ·ÊµÓĞÓÃ
+	    System.out.println(add.getPeople().getId());    //æµ‹è¯•å»¶è¿ŸåŠ è½½ç¡®å®æœ‰ç”¨
 	}
 	@org.junit.Test
 	public void delete(){
-//		Address add=(Address) session.get(Address.class, "8ab8dab2493fd57401493fd577100001"); //ÅäÖÃÑÓ³Ù¼ÓÔØºó£¬Ö»¼ÓÔØaddress£¬·ñÔòÈ«²¿¼ÓÔØ
-//	    session.delete(add);   //Á½´Î²éÑ¯£¬Á½´ÎÉ¾³ı£¬£¨´Ë·½·¨Ê§°Ü£¬±¨´íÎŞ·¨Ö´ĞĞÅúÁ¿¸üĞÂ£¬caused by Íâ¼ü¹ØÁª£©
+//		Address add=(Address) session.get(Address.class, "8ab8dab2493fd57401493fd577100001"); //é…ç½®å»¶è¿ŸåŠ è½½åï¼ŒåªåŠ è½½addressï¼Œå¦åˆ™å…¨éƒ¨åŠ è½½
+//	    session.delete(add);   //ä¸¤æ¬¡æŸ¥è¯¢ï¼Œä¸¤æ¬¡åˆ é™¤ï¼Œï¼ˆæ­¤æ–¹æ³•å¤±è´¥ï¼ŒæŠ¥é”™æ— æ³•æ‰§è¡Œæ‰¹é‡æ›´æ–°ï¼Œcaused by å¤–é”®å…³è”ï¼‰
         List<Address> query=new ArrayList<Address>();
 		try {
 			//query= session.createQuery("select u from Address u").list();

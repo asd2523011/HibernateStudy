@@ -2,7 +2,7 @@ package com.unicom.test;
 import java.util.HashSet;
 import java.util.Set;
 
-// ±ê×¼×¢½â
+// æ ‡å‡†æ³¨è§£
 
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
@@ -13,12 +13,12 @@ import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
-//Ôö¼ÓµÄ×¢½â
+//å¢åŠ çš„æ³¨è§£
 
 import org.hibernate.annotations.GenericGenerator;
 
-//µ±Ç°µÄÀàÊÇÒ»¸ö³Ö¾Ã»¯Àà£¬ÊÇCategoryÕâ¸öÀà¡£ËûÓ³ÉäÁËÒ»¸ö±ícategory¡£Ëù¶ÔÓ¦µÄ Êı¾İ¿âÊÇusers
-//Õâ¾ä£º@Table(name = "category", catalog = "users")  ¿ÉÒÔÊ¡ÂÔ
+//å½“å‰çš„ç±»æ˜¯ä¸€ä¸ªæŒä¹…åŒ–ç±»ï¼Œæ˜¯Categoryè¿™ä¸ªç±»ã€‚ä»–æ˜ å°„äº†ä¸€ä¸ªè¡¨categoryã€‚æ‰€å¯¹åº”çš„ æ•°æ®åº“æ˜¯users
+//è¿™å¥ï¼š@Table(name = "category", catalog = "users")  å¯ä»¥çœç•¥
 @Entity
 @Table(name = "category", catalog = "users")
 
@@ -40,8 +40,8 @@ public class Category implements java.io.Serializable {
   this.products = products;
  }
 
- // Ö÷¼ü £º@Id    Ö÷¼üÉú³É·½Ê½£ºstrategy = "increment"
- //Ó³Éä±íÖĞidÕâ¸ö×Ö¶Î£¬²»ÄÜÎª¿Õ£¬²¢ÇÒÊÇÎ¨Ò»µÄ
+ // ä¸»é”® ï¼š@Id    ä¸»é”®ç”Ÿæˆæ–¹å¼ï¼šstrategy = "increment"
+ //æ˜ å°„è¡¨ä¸­idè¿™ä¸ªå­—æ®µï¼Œä¸èƒ½ä¸ºç©ºï¼Œå¹¶ä¸”æ˜¯å”¯ä¸€çš„
  @GenericGenerator(name = "generator", strategy = "assigned")
  @Id
  @GeneratedValue(generator = "generator")
@@ -54,7 +54,7 @@ public class Category implements java.io.Serializable {
   this.id = id;
  }
 
- //Ó³Éä±íÖĞnameÕâ¸ö×Ö¶Î £¬³¤¶ÈÊÇ500
+ //æ˜ å°„è¡¨ä¸­nameè¿™ä¸ªå­—æ®µ ï¼Œé•¿åº¦æ˜¯500
  @Column(name = "name", length = 32)
  public String getName() {
   return this.name;
@@ -64,7 +64,7 @@ public class Category implements java.io.Serializable {
   this.name = name;
  }
  
- //Ó³Éä±íÖĞdescriptionÕâ¸ö×Ö¶Î £¬³¤¶ÈÊÇ500
+ //æ˜ å°„è¡¨ä¸­descriptionè¿™ä¸ªå­—æ®µ ï¼Œé•¿åº¦æ˜¯500
  @Column(name = "description", length = 32)
  public String getDescription() {
   return this.description;
@@ -74,10 +74,10 @@ public class Category implements java.io.Serializable {
   this.description = description;
  }
 
- //¼¶Áª²Ù×÷£ºcascade = CascadeType.ALL
- //ÑÓ³Ù¼ÓÔØ£ºfetch = FetchType.LAZY
- //Ó³Éä£ºmappedBy = "category"
- //Ò»¶Ô¶à·½Ê½
+ //çº§è”æ“ä½œï¼šcascade = CascadeType.ALL
+ //å»¶è¿ŸåŠ è½½ï¼šfetch = FetchType.LAZY
+ //æ˜ å°„ï¼šmappedBy = "category"
+ //ä¸€å¯¹å¤šæ–¹å¼
  @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY, mappedBy = "category")
  public Set<Product> getProducts() {
   return this.products;

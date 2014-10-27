@@ -46,8 +46,8 @@ public class Product implements java.io.Serializable {
   this.id = id;
  }
 
- //延迟加载：多对一方式
- //关联信息：外键name = "category_id"
+ //寤惰繜鍔犺浇锛氬瀵逛竴鏂瑰紡
+ //鍏宠仈淇℃伅锛氬閿畁ame = "category_id"
  @ManyToOne(fetch = FetchType.LAZY)
  @JoinColumn(name = "category_id")
  public Category getCategory() {
